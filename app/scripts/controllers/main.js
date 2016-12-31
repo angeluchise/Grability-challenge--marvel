@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the pruebaApp
  */
-angular.module('pruebaApp')
+angular.module('changelle-marvelApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('pruebaApp', [
+  .module('changelle-marvelApp', [
     'ngAnimate',
     'ngAria',
     'ngResource',
