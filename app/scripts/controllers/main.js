@@ -9,9 +9,7 @@
  */
 angular.module('changelle-marvelApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $(document).ready(function() {
+      $('select').material_select();
+    });
   });

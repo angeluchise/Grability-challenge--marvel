@@ -1,0 +1,34 @@
+body{
+  background: $gray-ligth;
+}
+.container-circule--image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+    right: 63px;
+    bottom: 30px;
+}
+.container-text--descrition {
+    position: relative;
+    bottom: 200px;
+    left: 120px;
+    width: 172px;
+    text-align: justify;
+}
+.container-text-relatedComics {
+    position: relative;
+    bottom: 196px;
+}
+.container-favorite{
+    height: 800px;
+    background: $gray-semi-ligth;
+}
+.container-card--character{
+    height: 320px;
+    background: white;
+}
+.container-filter--character {
+    height: 61px;
+}
