@@ -1,5 +1,66 @@
+body {
+  background: #f4f4f4; }
+
+.container-circule--image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: black;
+  position: relative;
+  right: 63px;
+  bottom: 30px; }
+
+.container-text--descrition {
+  position: relative;
+  bottom: 200px;
+  left: 120px;
+  width: 172px;
+  text-align: justify; }
+
+.container-text-relatedComics {
+  position: relative;
+  bottom: 196px; }
+
+.container-favorite {
+  height: 800px;
+  background: #ebebeb; }
+
+.container-card--character {
+  height: 320px;
+  background: white; }
+
+.container-filter--character {
+  height: 61px; }
+
 nav {
-  background: #212121 !important; }
+  background: #2d2727 !important; }
+
+.input-search {
+  background: #fff !important;
+  height: 31px !important;
+  color: red !important;
+  border-color: red !important;
+  width: 420px !important;
+  padding-right: 2rem !Important; }
+
+.button-size {
+  width: 105px;
+  padding: 0;
+  margin-top: 14px; }
+
+.container-text--descrition h4 {
+  margin: 0;
+  font-weight: 500; }
+.container-text--descrition p {
+  font-size: 12px;
+  margin: 0px 6px; }
+
+.container-text-relatedComics h5 {
+  margin: 22px 0 0 0px; }
+.container-text-relatedComics p {
+  font-size: 12px;
+  float: left;
+  margin: 13px 50px 0 0; }
 
 .logo {
   background-image: url(../images/Marvel_Comics_logo.png);
@@ -8,5 +69,13 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 6px 0 0 19px; }
+
+i.material-icons.prefix {
+  top: 0px;
+  right: 0;
+  color: gray; }
+
+i.material-icons.prefix.active {
+  color: #ec1d23 !important; }
 
 /*# sourceMappingURL=CMA.css.map */

@@ -6,3 +6,11 @@
   background-repeat: no-repeat;
   margin: 6px 0 0 19px;
 }
+i.material-icons.prefix {
+    top: 0px;
+    right: 0;
+    color: gray;
+}
+i.material-icons.prefix.active {
+    color: $red !important;
+}
