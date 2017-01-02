@@ -94,6 +94,11 @@ nav {
   margin: 16px 0 0 0;
   font-weight: 500; }
 
+.footer-paragraph {
+  margin: 0;
+  float: left;
+  font-weight: 500; }
+
 .logo {
   background-image: url(../images/Marvel_Comics_logo.png);
   width: 140px;
