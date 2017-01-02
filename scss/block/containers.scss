@@ -26,8 +26,13 @@ body{
     background: $gray-semi-ligth;
 }
 .container-card--character{
-    height: 320px;
-    background: white;
+  height: 320px;
+  background: white;
+  margin: 23px 0 0 0;
+  width: 310px;
+  float: left;
+  margin: 25px 0 30px 57px;
+  padding: 0px 13px;
 }
 .container-filter--character {
     height: 61px;
