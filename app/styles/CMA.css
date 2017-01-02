@@ -1,6 +1,9 @@
 body {
   background: #f4f4f4; }
 
+footer {
+  background: #2d2727 !important; }
+
 .container-circule--image {
   width: 180px;
   height: 180px;
@@ -37,6 +40,9 @@ body {
 .container-filter--character {
   height: 61px; }
 
+.container-flex {
+  display: flex; }
+
 nav {
   background: #2d2727 !important; }
 
@@ -71,6 +77,12 @@ nav {
   margin: 13px 50px 0 0;
   color: #786e6f; }
 
+.container-favorite p {
+  color: #2d2727;
+  font-size: 26px;
+  margin: 16px 0 0 0;
+  font-weight: 500; }
+
 .logo {
   background-image: url(../images/Marvel_Comics_logo.png);
   width: 140px;
@@ -86,5 +98,29 @@ i.material-icons.prefix {
 
 i.material-icons.prefix.active {
   color: #ec1d23 !important; }
+
+.icon {
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 13px; }
+
+.characters {
+  background-image: url(../icons/characters.png);
+  width: 41px;
+  height: 42px; }
+
+.favorite {
+  background-image: url(../icons/favourites.png);
+  width: 41px;
+  height: 42px;
+  margin-right: 9px; }
+
+.logo-grability {
+  background-image: url(../images/grability-logo.png);
+  width: 41px;
+  height: 41px;
+  margin: 0; }
 
 /*# sourceMappingURL=CMA.css.map */

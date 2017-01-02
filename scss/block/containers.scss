@@ -1,6 +1,9 @@
 body{
   background: $gray-ligth;
 }
+footer{
+  background: $gray-dark !important;
+}
 .container-circule--image {
     width: 180px;
     height: 180px;
@@ -36,4 +39,7 @@ body{
 }
 .container-filter--character {
     height: 61px;
+}
+.container-flex {
+  display: flex;
 }
