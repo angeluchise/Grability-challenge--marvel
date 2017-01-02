@@ -2,7 +2,9 @@ body {
   background: #f4f4f4; }
 
 footer {
-  background: #2d2727 !important; }
+  background: #2d2727 !important;
+  margin: 0 !important;
+  padding: 0 !important; }
 
 .container-circule--image {
   width: 180px;
@@ -25,8 +27,10 @@ footer {
   bottom: 196px; }
 
 .container-favorite {
-  height: 800px;
-  background: #ebebeb; }
+  min-height: 100% !important;
+  background: #ebebeb;
+  height: 100%;
+  padding: 0 0.75rem 100% 0.75rem !important; }
 
 .container-card--character {
   height: 320px;
@@ -42,6 +46,13 @@ footer {
 
 .container-flex {
   display: flex; }
+
+.no-margins {
+  margin: 0 !important; }
+
+.footer-copyright {
+  height: 100% !important;
+  padding: 13px 0; }
 
 nav {
   background: #2d2727 !important; }
@@ -119,8 +130,8 @@ i.material-icons.prefix.active {
 
 .logo-grability {
   background-image: url(../images/grability-logo.png);
-  width: 41px;
-  height: 41px;
+  width: 50px;
+  height: 50px;
   margin: 0; }
 
 /*# sourceMappingURL=CMA.css.map */

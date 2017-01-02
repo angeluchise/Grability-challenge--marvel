@@ -3,6 +3,8 @@ body{
 }
 footer{
   background: $gray-dark !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .container-circule--image {
     width: 180px;
@@ -25,8 +27,10 @@ footer{
     bottom: 196px;
 }
 .container-favorite{
-    height: 800px;
-    background: $gray-semi-ligth;
+  min-height: 100% !important;
+  background: $gray-semi-ligth;
+  height: 100%;
+  padding: 0 0.75rem 100% 0.75rem !important;
 }
 .container-card--character{
   height: 320px;
@@ -42,4 +46,12 @@ footer{
 }
 .container-flex {
   display: flex;
+}
+
+.no-margins {
+  margin: 0 !important;
+}
+.footer-copyright {
+    height: 100% !important;
+    padding: 13px 0;
 }
