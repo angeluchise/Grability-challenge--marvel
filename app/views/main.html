@@ -42,7 +42,8 @@
         </div>
         <div class="container-text--descrition">
           <h4>{{character.name}}</h4>
-          <p>{{character.description | limitTo: 120}}</p>
+          <p ng-show="character.description">{{character.description | limitTo: 120}}</p>
+          <p ng-hide="character.description">The hero no have Description</p>
             <a class="waves-effect waves-light btn red button-size">VIEW MORE</a>
         </div>
         <div class="container-text-relatedComics">
@@ -54,6 +55,19 @@
 
         </div>
       </div>
+      </div>
+      <div class="row">
+        <div class="container-center">
+          <ul class="pagination" >
+            <li class="disabled"><a href="#!" ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'><i class="material-icons">chevron_left</i></a></li>
+            <li class="active"><a href="#!" >1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!" ng-disabled='currentPage >= usuarios.length/pageSize - 1' , ng-click='currentPage = currentPage + 1'><i class="material-icons">chevron_right</i></a></li>
+          </ul>
+        </div>
       </div>
     </div>
    <div class="col s3 container-favorite">
