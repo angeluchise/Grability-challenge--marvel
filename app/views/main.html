@@ -6,7 +6,7 @@
          </div></a>
        </div>
        <div class="input-field col s6">
-          <input placeholder="Search" id="first_name" type="text" class="validate input-search">
+          <input placeholder="Search" id="first_name" type="text" class="validate input-search" ng-model="searchText">
           <i class="material-icons prefix">search</i>
         </div>
        <div class="col s3">
@@ -37,87 +37,25 @@
        </div>
      </div>
     <div class="row">
-      <div class="container-card--character">
-        <div class="container-circule--image">
+      <div class="container-card--character" ng-repeat="character in characters | limitTo: 10 | filter:searchText as rest">
+        <div class="container-circule--image" style="background-image: url({{character.thumbnail.path}}/portrait_fantastic.jpg);">
         </div>
         <div class="container-text--descrition">
-          <h4>Heroe</h4>
-          <p>
-            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-          </p>
+          <h4>{{character.name}}</h4>
+          <p>{{character.description | limitTo: 120}}</p>
             <a class="waves-effect waves-light btn red button-size">VIEW MORE</a>
         </div>
         <div class="container-text-relatedComics">
           <h5>Related Comics</h5>
-          <p>Lorem Ipsum</p>
-          <p>Lorem Ipsum</p>
-          <p>Lorem Ipsum</p>
-          <p>Lorem Ipsum</p>
+          <p ng-show="character.stories.items[0].name">{{character.stories.items[0].name | limitTo: 20}}</p>
+          <p ng-show="character.events.items[0].name">{{character.events.items[0].name  | limitTo: 20}}</p>
+          <p ng-show="character.comics.items[0].name">{{character.comics.items[0].name  | limitTo: 20}}</p>
+          <p ng-show="character.events.items[0].name">{{character.events.items[0].name  | limitTo: 20}}</p>
 
         </div>
       </div>
-
-      <div class="container-card--character" >
-       <div class="container-circule--image">
-
-       </div>
-       <div class="container-text--descrition">
-         <h4>Heroe</h4>
-         <p>
-           Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-         </p>
-         <a class="waves-effect waves-light btn red button-size">VIEW MORE</a>
-       </div>
-       <div class="container-text-relatedComics">
-         <h5>Related Comics</h5>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-       </div>
-      </div>
-
-      <div class="container-card--character" >
-       <div class="container-circule--image">
-
-       </div>
-       <div class="container-text--descrition">
-         <h4>Heroe</h4>
-         <p>
-           Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-         </p>
-         <a class="waves-effect waves-light btn red button-size">VIEW MORE</a>
-       </div>
-       <div class="container-text-relatedComics">
-         <h5>Related Comics</h5>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-       </div>
-      </div>
-
-      <div class="container-card--character" >
-       <div class="container-circule--image">
-
-       </div>
-       <div class="container-text--descrition">
-         <h4>Heroe</h4>
-         <p>
-           Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-         </p>
-         <a class="waves-effect waves-light btn red button-size">VIEW MORE</a>
-       </div>
-       <div class="container-text-relatedComics">
-         <h5>Related Comics</h5>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-         <p>Lorem Ipsum</p>
-       </div>
       </div>
     </div>
-  </div>
    <div class="col s3 container-favorite">
      <i class="icon favorite"></i><p>My Favorites</p>
    </div>

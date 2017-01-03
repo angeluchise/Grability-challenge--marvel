@@ -11,45 +11,50 @@ footer{
     height: 180px;
     border-radius: 50%;
     background: black;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     right: 63px;
     bottom: 30px;
 }
 .container-text--descrition {
     position: relative;
-    bottom: 200px;
+    bottom: 193px;
     left: 120px;
     width: 172px;
+    height: 190px;
     text-align: justify;
 }
 .container-text-relatedComics {
     position: relative;
     bottom: 196px;
+    right: 14px;
+    width: 311px;
 }
 .container-favorite{
-  min-height: 100% !important;
-  background: $gray-semi-ligth;
-  height: 100%;
-  padding: 0 0.75rem 100% 0.75rem !important;
+    min-height: 100% !important;
+    background: $gray-semi-ligth;
+    height: 100%;
+    padding: 0 0.75rem 100% 0.75rem !important;
 }
 .container-card--character{
-  height: 320px;
-  background: white;
-  margin: 23px 0 0 0;
-  width: 310px;
-  float: left;
-  margin: 25px 0 30px 57px;
-  padding: 0px 13px;
+    height: 340px;
+    background: white;
+    margin: 23px 0 0 0;
+    width: 310px;
+    float: left;
+    margin: 25px 0 30px 57px;
+    padding: 0px 13px;
 }
 .container-filter--character {
     height: 61px;
 }
 .container-flex {
-  display: flex;
+    display: flex;
 }
 
 .no-margins {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 .footer-copyright {
     height: 100% !important;

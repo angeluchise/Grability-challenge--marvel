@@ -11,20 +11,25 @@ footer {
   height: 180px;
   border-radius: 50%;
   background: black;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   right: 63px;
   bottom: 30px; }
 
 .container-text--descrition {
   position: relative;
-  bottom: 200px;
+  bottom: 193px;
   left: 120px;
   width: 172px;
+  height: 190px;
   text-align: justify; }
 
 .container-text-relatedComics {
   position: relative;
-  bottom: 196px; }
+  bottom: 196px;
+  right: 14px;
+  width: 311px; }
 
 .container-favorite {
   min-height: 100% !important;
@@ -33,7 +38,7 @@ footer {
   padding: 0 0.75rem 100% 0.75rem !important; }
 
 .container-card--character {
-  height: 320px;
+  height: 340px;
   background: white;
   margin: 23px 0 0 0;
   width: 310px;
@@ -73,20 +78,23 @@ nav {
 .container-text--descrition h4 {
   margin: 0;
   font-weight: 500;
+  font-size: 24px;
   color: #2d2727; }
 .container-text--descrition p {
   font-size: 12px;
-  margin: 0px 6px;
+  margin: 8px 6px 0;
   color: #786e6f; }
 
 .container-text-relatedComics h5 {
-  margin: 22px 0 0 0px;
+  margin: 22px 0 0 11px;
   color: #786e6f; }
 .container-text-relatedComics p {
   font-size: 12px;
   float: left;
-  margin: 13px 50px 0 0;
-  color: #786e6f; }
+  margin: 13px 0 0 0;
+  color: #786e6f;
+  width: 155px;
+  padding: 0 0 0 11px; }
 
 .container-favorite p {
   color: #2d2727;
