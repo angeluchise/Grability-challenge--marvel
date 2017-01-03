@@ -6,25 +6,27 @@
       color: $gray-dark;
     }
     p {
-    font-size: 12px;
-    margin: 0px 6px;
-    color: $gray;
+      font-size: 12px;
+      margin: 8px 6px 0;
+      color: $gray;
     }
 }
 .container-text-relatedComics {
-  h5{
-      margin: 22px 0 0 0px;
+  h5 {
+      margin: 22px 0 0 11px;
       color: $gray;
   }
   p {
-      font-size: 12px;
-      float: left;
-      margin: 13px 50px 0 0;
-      color: $gray;
+    font-size: 12px;
+    float: left;
+    margin: 13px 0 0 0;
+    color: $gray;
+    width: 155px;
+    padding: 0 0 0 11px;
   }
 }
 .container-favorite{
-  p{
+  p {
     color: $gray-dark;
     font-size: 26px;
     margin: 16px 0 0 0;

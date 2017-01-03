@@ -47,10 +47,10 @@
         </div>
         <div class="container-text-relatedComics">
           <h5>Related Comics</h5>
-          <p>{{character.stories.items[0].name | limitTo: 20}}</p>
-          <p>{{character.events.items[0].name  | limitTo: 20}}</p>
-          <p>{{character.comics.items[0].name  | limitTo: 20}}</p>
-          <p>{{character.events.items[0].name  | limitTo: 20}}</p>
+          <p ng-show="character.stories.items[0].name">{{character.stories.items[0].name | limitTo: 20}}</p>
+          <p ng-show="character.events.items[0].name">{{character.events.items[0].name  | limitTo: 20}}</p>
+          <p ng-show="character.comics.items[0].name">{{character.comics.items[0].name  | limitTo: 20}}</p>
+          <p ng-show="character.events.items[0].name">{{character.events.items[0].name  | limitTo: 20}}</p>
 
         </div>
       </div>
