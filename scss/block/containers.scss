@@ -41,7 +41,7 @@ footer{
     height: 340px;
     background: white;
     margin: 23px 0 0 0;
-    width: 310px;
+    width: 40%;
     float: left;
     margin: 25px 0 30px 57px;
     padding: 0px 13px;
@@ -59,4 +59,8 @@ footer{
 .footer-copyright {
     height: 100% !important;
     padding: 13px 0;
+}
+.container-center {
+  display: table;
+  margin: 0 auto;
 }
