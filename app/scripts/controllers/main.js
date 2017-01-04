@@ -14,12 +14,14 @@
     $(document).ready(function() {
       $('select').material_select();
     });
+    $scope.orderList = "name";
     $scope.currentPage = 0;
 
     $scope.pageSize = 10; // Esta la cantidad de registros que deseamos mostrar por página
     $scope.pages = [];
     api_marvel.get(function (data){
       $scope.characters = data.data.results;
+      console.log($scope.characters);
     });
     $scope.configPages = function() {
       api_marvel.get(function (data){
