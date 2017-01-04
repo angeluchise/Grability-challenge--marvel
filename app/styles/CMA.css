@@ -89,7 +89,8 @@ nav {
   width: 97% !important; }
 
 ul.pagination {
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 26px; }
 
 li.waves-effect {
   height: 40px; }
