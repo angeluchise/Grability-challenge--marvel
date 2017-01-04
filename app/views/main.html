@@ -27,17 +27,16 @@
        </div>
        <div class="col s3">
          <div class="input-field col s12">
-           <select>
+           <select ng-model="orderList">
              <option value="" disabled selected>Sort by</option>
-             <option value="1">Option 1</option>
-             <option value="2">Option 2</option>
-             <option value="3">Option 3</option>
+             <option value="name">name</option>
+             <option value="modified">Modified</option>
            </select>
          </div>
        </div>
      </div>
     <div class="row">
-      <div class="container-card--character" ng-repeat="character in characters | startFromGrid: currentPage * pageSize | limitTo: pageSize | filter:searchText as rest">
+      <div class="container-card--character" ng-repeat="character in characters | orderBy: orderList | startFromGrid: currentPage * pageSize | limitTo: pageSize | filter:searchText as rest ">
         <div class="container-circule--image" style="background-image: url({{character.thumbnail.path}}/portrait_fantastic.jpg);">
         </div>
         <div class="container-text--descrition">
