@@ -63,6 +63,20 @@ footer {
   display: table;
   margin: 0 auto; }
 
+.container-favorite--title {
+  margin-left: 3%; }
+
+.container-comics--favorite {
+  position: relative;
+  height: 400px;
+  top: 19px; }
+
+.comics-read {
+  background: black;
+  width: 80%;
+  height: 80%;
+  margin-left: 35px; }
+
 nav {
   background: #2d2727 !important; }
 
@@ -133,6 +147,12 @@ button[disabled], html input[disabled] {
   float: left;
   font-weight: 500; }
 
+.container-comics--favorite .comics-read {
+  background: black;
+  width: 80%;
+  height: 80%;
+  margin-left: 35px; }
+
 .logo {
   background-image: url(../images/Marvel_Comics_logo.png);
   width: 140px;
@@ -165,7 +185,8 @@ i.material-icons.prefix.active {
   background-image: url(../icons/favourites.png);
   width: 41px;
   height: 42px;
-  margin-right: 9px; }
+  margin-right: 9px;
+  margin-top: 0; }
 
 .logo-grability {
   background-image: url(../images/grability-logo.png);
