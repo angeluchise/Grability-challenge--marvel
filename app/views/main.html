@@ -37,7 +37,7 @@
        </div>
      </div>
     <div class="row">
-      <div class="container-card--character" ng-repeat="character in characters | limitTo: 10 | filter:searchText as rest">
+      <div class="container-card--character" ng-repeat="character in characters | startFromGrid: currentPage * pageSize | limitTo: pageSize | filter:searchText as rest">
         <div class="container-circule--image" style="background-image: url({{character.thumbnail.path}}/portrait_fantastic.jpg);">
         </div>
         <div class="container-text--descrition">
@@ -58,20 +58,17 @@
       </div>
       <div class="row">
         <div class="container-center">
-          <ul class="pagination" >
-            <li class="disabled"><a href="#!" ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!" >1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!" ng-disabled='currentPage >= usuarios.length/pageSize - 1' , ng-click='currentPage = currentPage + 1'><i class="material-icons">chevron_right</i></a></li>
+          <ul class="pagination">
+            <li><button class="btn-pagination" ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'  ng-click='currentPage = currentPage - 1'><i class="material-icons">chevron_left</i></button></li>
+            <li  ng-repeat='page in pages'><button class="btn-pagination" ng-disabled='currentPage == page.no - 1' ng-click='setPage(page.no)' >{{page.no}}</button></li>
+            <li><button class="btn-pagination" ng-disabled='currentPage >= characters.length/pageSize - 1' ng-click='currentPage = currentPage + 1'><i class="material-icons">chevron_right</i></button></li>
           </ul>
         </div>
       </div>
     </div>
    <div class="col s3 container-favorite">
      <i class="icon favorite"></i><p>My Favorites</p>
+  </div>
    </div>
  </div>
 <footer class="page-footer">

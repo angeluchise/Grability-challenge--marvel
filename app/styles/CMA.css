@@ -73,10 +73,32 @@ nav {
   border-color: red !important;
   width: 97% !important; }
 
+ul.pagination {
+  margin: 0; }
+
+li.waves-effect {
+  height: 40px; }
+
 .button-size {
   width: 105px;
   padding: 0;
   margin-top: 14px; }
+
+.btn-pagination {
+  background: white;
+  border: 1px solid rgba(128, 128, 128, 0.34);
+  padding: 2px 0 0 0;
+  width: 44px;
+  height: 41px;
+  margin: 0 3px 0 3px;
+  font-weight: bold; }
+
+.btn-pagination:focus {
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.1) !important; }
+
+button[disabled], html input[disabled] {
+  color: rgba(128, 128, 128, 0.57); }
 
 .container-text--descrition h4 {
   margin: 0;
