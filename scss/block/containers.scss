@@ -64,3 +64,18 @@ footer{
   display: table;
   margin: 0 auto;
 }
+.container-favorite--title {
+    margin-left: 3%;
+}
+.container-comics--favorite {
+    position: relative;
+    height: 400px;
+    top: 19px;
+    margin-bottom: 20px;
+}
+.comics-read {
+    background: black;
+    width: 80%;
+    height: 80%;
+    margin-left: 35px;
+}
