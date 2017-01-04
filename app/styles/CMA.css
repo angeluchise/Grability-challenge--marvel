@@ -93,6 +93,10 @@ li.waves-effect {
   margin: 0 3px 0 3px;
   font-weight: bold; }
 
+.btn-pagination:focus {
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.1) !important; }
+
 button[disabled], html input[disabled] {
   color: rgba(128, 128, 128, 0.57); }
 

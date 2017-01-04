@@ -42,7 +42,7 @@
           $scope.currentPage = $scope.pages.length - 1;
       });
     };
-    
+    console.log($scope.currentPage);
 
 
     $scope.setPage = function(index) {
