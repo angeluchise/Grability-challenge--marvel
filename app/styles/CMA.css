@@ -69,7 +69,8 @@ footer {
 .container-comics--favorite {
   position: relative;
   height: 400px;
-  top: 19px; }
+  top: 19px;
+  margin-bottom: 20px; }
 
 .comics-read {
   background: black;
