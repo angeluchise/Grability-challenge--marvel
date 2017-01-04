@@ -3,3 +3,15 @@
     padding: 0;
     margin-top: 14px;
 }
+.btn-pagination {
+    background: white;
+    border: 1px solid rgba(128, 128, 128, 0.34);
+    padding: 2px 0 0 0;
+    width: 44px;
+    height: 41px;
+    margin: 0 3px 0 3px;
+    font-weight: bold;
+}
+button[disabled], html input[disabled] {
+    color: rgba(128, 128, 128, 0.57);
+}
