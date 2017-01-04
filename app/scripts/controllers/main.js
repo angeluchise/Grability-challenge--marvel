@@ -11,6 +11,9 @@
   var app = angular.module('changelle-marvelApp');
 
   app.controller('MainCtrl',  function($scope,api_marvel) {
+    $(document).ready(function() {
+      $('select').material_select();
+    });
     $scope.currentPage = 0;
 
     $scope.pageSize = 10; // Esta la cantidad de registros que deseamos mostrar por página
