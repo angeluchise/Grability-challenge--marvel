@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/**1
  * @ngdoc function
  * @name pruebaApp.controller:MainCtrl
  * @description
@@ -11,8 +11,12 @@
   var app = angular.module('changelle-marvelApp');
 
   app.controller('MainCtrl',  function($scope,api_marvel) {
+
     $(document).ready(function() {
       $('select').material_select();
+      $('.modal-trigger').leanModal({
+		dismissible: false
+	});
     });
     $scope.orderList = "name";
     $scope.currentPage = 0;
@@ -56,8 +60,9 @@
 
     $scope.configPages();
   }).filter('startFromGrid', function() {
-     return function(input, start) {
-        start = +start;
+    return function(input, start) {
+        if (!input || !input.length) { return; }
+        start = +start; //parse to int
         return input.slice(start);
-     };
-  });
+    }
+});

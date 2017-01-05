@@ -47,6 +47,42 @@
         margin-left: 35px;
     }
     p {
-      
+
     }
+}
+.container-modal--content {
+  .comics-view {
+      height: 250px;
+      width: 190px;
+      float: left;
+      margin: 0 27px;
+      background: black;
+  }
+  h4 {
+
+  }
+  p {
+    color: $gray;
+  }
+}
+.container-button--modal {
+  .btn-modal {
+      width: 50%;
+      float: left;
+      height: 100%;
+      border: none;
+      color: red;
+      font-weight: bold;
+  }
+  .btn-modal:focus {
+    background: $gray-dark !important;
+  }
+
+  .btn-add {
+    background: #ecebeb;
+      p {
+        color: black;
+      }
+  }
+
 }
