@@ -43,7 +43,9 @@
           <h4>{{character.name}}</h4>
           <p ng-show="character.description">{{character.description | limitTo: 120}}</p>
           <p ng-hide="character.description">The hero no have Description</p>
-            <a class="waves-effect waves-light btn red button-size">VIEW MORE</a>
+          <a class="waves-effect waves-light btn red button-size" href='#demoModal' modal>VIEW MORE</a>
+
+
         </div>
         <div class="container-text-relatedComics">
           <h5>Related Comics</h5>
@@ -93,3 +95,24 @@
     </div>
   </div>
 </footer>
+<!-- Modal Structure -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-close--modal"> <i class="material-icons">close</i></a>
+        <div class="container-modal--content">
+          <div class="comics-view">
+
+          </div>
+          <h4>hola</h4>
+          <p>A bunch of text</p>
+        </div>
+    </div>
+    <div class="container-button--modal">
+      <button type="button" name="button" class="btn-modal btn-add"><i class="icon favorite-black"></i> <p>
+        ADDED TO FAVORITES
+      </p></button>
+      <button type="button" name="button" class="btn-modal btn-buy"><i class="icon shopping"></i><p>
+        BUY FOR $3.0
+      </p></button>
+    </div>
+</div>

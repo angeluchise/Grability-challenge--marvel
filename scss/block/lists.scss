@@ -5,3 +5,10 @@ ul.pagination {
 li.waves-effect {
     height: 40px;
 }
+a.item.item-avatar {
+    border: none;
+    padding-left: 140px;
+}
+.item-avatar img {
+    left: 87px !important;
+}
