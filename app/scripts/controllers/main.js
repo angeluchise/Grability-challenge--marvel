@@ -10,16 +10,13 @@
 
   var app = angular.module('changelle-marvelApp');
 
-  app.controller('MainCtrl',  function($scope,api_marvel,$routeParams,api_marvel_characters) {
+  app.controller('MainCtrl',  function($scope,api_marvel,$routeParams,api_marvel_characters,$webSql,$window) {
     $scope.main_variable = function (id) {
-      console.log(id);
       api_marvel_characters.get({characterId:id}, function (data){
         $scope.characterComics = data.data.results[0];
         $scope.characterCs = data.data.count;
-        console.log($scope.characterCs);
       });
     }
-
     $(document).ready(function() {
       $('select').material_select();
       $('.modal-trigger').leanModal({
@@ -62,6 +59,53 @@
       $scope.currentPage = index - 1;
     };
     $scope.configPages();
+    $scope.db = $webSql.openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+    $scope.db.createTable('User', {
+      "id":{
+        "type": "INTEGER",
+        "null": "NOT NULL", // default is "NULL" (if not defined)
+        "primary": true, // primary
+        "auto_increment": true // auto increment
+      },
+      "created":{
+        "type": "TIMESTAMP",
+        "null": "NOT NULL",
+        "default": "CURRENT_TIMESTAMP" // default value
+      },
+      "title":{
+        "type": "TEXT",
+        "null": "NOT NULL"
+      },
+      "images": {
+        "type": "TEXT",
+        "null": "NOT NULL"
+      }
+    });
+    $scope.db.selectAll("user").then(function(results) {
+      for(var i=0; i < results.rows.length; i++){
+        $scope.users.push(results.rows.item(i));
+      }
+    })
+    $scope.users = [];
+    console.log($scope.users);
+    var values = [{name: 'Jimi', gender: 'male'},{name: 'Peter', gender: 'male'},{name: 'Bob', gender: 'male'}];
+    console.log(values);
+    angular.forEach($scope.users, function(value, key) {
+        console.log(value.title);
+        console.log(key);
+    });
+    $scope.add_comics = function (title,images){
+      if($scope.users[0].title == title) {
+        console.log('existe');
+      } else {
+        $scope.db.insert('user', {"title": title, "images": images+'/portrait_fantastic.jpg'}).then(function(results) {
+          console.log(results.insertId);
+        })
+        $window.location.reload();
+      }
+      console.log($scope.users[0].title);
+      console.log(title);
+    }
   }).filter('startFromGrid', function() {
     return function(input, start) {
         if (!input || !input.length) { return; }

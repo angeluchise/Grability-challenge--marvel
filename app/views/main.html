@@ -71,10 +71,10 @@
      <div class="container-favorite--title">
        <i class="icon favorite"></i><p>My Favorites</p>
      </div>
-     <div class="container-comics--favorite">
-        <div class="comics-read">
+     <div class="container-comics--favorite" ng-repeat="user in users">
+        <div class="comics-read" style="background-image: url({{user.images}});">
         </div>
-        <p>Comics title</p>
+        <p>{{user.title}}</p>
      </div>
   </div>
    </div>
@@ -107,7 +107,7 @@
         </div>
     </div>
     <div class="container-button--modal">
-      <button type="button" name="button" class="btn-modal btn-add"><i class="icon favorite-black"></i> <p>
+      <button type="button" name="button" class="btn-modal btn-add" ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)"><i class="icon favorite-black" ></i> <p>
         ADDED TO FAVORITES
       </p></button>
       <button type="button" name="button" class="btn-modal btn-buy"><i class="icon shopping"></i><p>
