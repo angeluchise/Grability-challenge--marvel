@@ -10,15 +10,7 @@
 
   var app = angular.module('changelle-marvelApp');
 
-  app.controller('MainCtrl',  function($scope,api_marvel,$routeParams,api_marvel_characters) {
-    $scope.main_variable = function (id) {
-      console.log(id);
-      api_marvel_characters.get({characterId:id}, function (data){
-        $scope.characterComics = data.data.results[0];
-        $scope.characterCs = data.data.count;
-        console.log($scope.characterCs);
-      });
-    }
+  app.controller('HomeCtrl',  function($scope,api_marvel) {
 
     $(document).ready(function() {
       $('select').material_select();
@@ -33,6 +25,7 @@
     $scope.pages = [];
     api_marvel.get(function (data){
       $scope.characters = data.data.results;
+      console.log($scope.characters);
     });
     $scope.configPages = function() {
       api_marvel.get(function (data){
@@ -58,9 +51,13 @@
           $scope.currentPage = $scope.pages.length - 1;
       });
     };
+    console.log($scope.currentPage);
+
+
     $scope.setPage = function(index) {
       $scope.currentPage = index - 1;
     };
+
     $scope.configPages();
   }).filter('startFromGrid', function() {
     return function(input, start) {
