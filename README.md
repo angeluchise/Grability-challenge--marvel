@@ -1,7 +1,14 @@
-# prueba
+# Test Grability
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+Web app para ver heroes de marvel y agregar favoritos utlizando el api de marvel https://developer.marvel.com/
+
+## bower
+
+Bower install
+
+## NPM
+
+npm install
 
 ## Build & development
 

@@ -58,11 +58,11 @@
       margin: 0 27px;
       background: black;
   }
-  h4 {
-
-  }
   p {
     color: $gray;
+    height: 161px;
+    overflow-y: scroll;
+    padding-right: 13px;
   }
 }
 .container-button--modal {

@@ -193,7 +193,10 @@ button[disabled], html input[disabled] {
   margin: 0 27px;
   background: black; }
 .container-modal--content p {
-  color: #786e6f; }
+  color: #786e6f;
+  height: 161px;
+  overflow-y: scroll;
+  padding-right: 13px; }
 
 .container-button--modal .btn-modal {
   width: 50%;
