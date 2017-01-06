@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'angular-md5',
-    'ui.materialize'
+    'ui.materialize',
+    'angular-websql'
   ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -184,7 +184,9 @@ button[disabled], html input[disabled] {
   background: black;
   width: 80%;
   height: 80%;
-  margin-left: 35px; }
+  margin-left: 35px;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .container-modal--content .comics-view {
   height: 250px;
