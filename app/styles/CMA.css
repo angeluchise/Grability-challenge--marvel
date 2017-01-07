@@ -250,14 +250,14 @@ i.material-icons.prefix.active {
   width: 41px;
   height: 42px;
   margin-right: 9px;
-  margin-top: 0; }
+  margin-top: 2px; }
 
 .favorite-black {
   background-image: url(../icons/btn-favourites-default.png);
   width: 41px;
   height: 42px;
-  margin-top: 5px;
-  margin-right: 16px; }
+  margin-right: 9px;
+  margin-top: 2px; }
 
 .shopping {
   background-image: url(../icons/shopping-cart-primary.png);

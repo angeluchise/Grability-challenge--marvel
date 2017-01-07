@@ -106,7 +106,6 @@
         $window.location.reload();
       };
     }
-    console.log($scope.users.length+'hola');  
   }).filter('startFromGrid', function() {
     return function(input, start) {
         if (!input || !input.length) { return; }

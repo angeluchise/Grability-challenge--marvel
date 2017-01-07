@@ -107,7 +107,7 @@
     <div class="container-button--modal">
       <button type="button" name="button" class="btn-modal btn-add" ng-disabled='characterCs == 0' ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)">
           <div class="container-center" style="width: 211px;">
-            <i class="icon favorite-black" ></i> <p>
+            <i class="icon" ng-class="characterCs == 0? 'favorite-black':'favorite'"></i> <p>
                   ADDED TO FAVORITES
                 </p>
           </div>
