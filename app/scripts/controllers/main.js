@@ -84,28 +84,29 @@
     $scope.db.selectAll("user").then(function(results) {
       for(var i=0; i < results.rows.length; i++){
         $scope.users.push(results.rows.item(i));
+        $scope.value_user =results.rows.item(i);
+        $scope.add_comics = function (title,images) {
+          if($scope.value_user.title == title) {
+            alert("favorite exist");
+          } else {
+            $scope.db.insert('user', {"title": title, "images": images+'/portrait_fantastic.jpg'}).then(function(results) {
+              console.log(results.insertId);
+            })
+            $window.location.reload();
+          }
+        };
       }
     })
     $scope.users = [];
-    console.log($scope.users);
-    var values = [{name: 'Jimi', gender: 'male'},{name: 'Peter', gender: 'male'},{name: 'Bob', gender: 'male'}];
-    console.log(values);
-    angular.forEach($scope.users, function(value, key) {
-        console.log(value.title);
-        console.log(key);
-    });
-    $scope.add_comics = function (title,images){
-      if($scope.users[0].title == title) {
-        console.log('existe');
-      } else {
+    if ($scope.users.length == 0) {
+      $scope.add_comics = function (title,images) {
         $scope.db.insert('user', {"title": title, "images": images+'/portrait_fantastic.jpg'}).then(function(results) {
-          console.log(results.insertId);
+            console.log(results.insertId);
         })
         $window.location.reload();
-      }
-      console.log($scope.users[0].title);
-      console.log(title);
+      };
     }
+    console.log($scope.users.length+'hola');  
   }).filter('startFromGrid', function() {
     return function(input, start) {
         if (!input || !input.length) { return; }

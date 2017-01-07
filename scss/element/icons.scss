@@ -37,18 +37,16 @@ i.material-icons.prefix.active {
   background-image: url(../icons/btn-favourites-default.png);
   width: 41px;
   height: 42px;
-  position: relative;
-  bottom: 7px;
-  left: 56px;
+  margin-top: 5px;
+  margin-right: 16px;
 }
 .shopping{
   background-image: url(../icons/shopping-cart-primary.png);
   width: 41px;
   height: 42px;
-  position: relative;
-  bottom: 7px;
-  left: 90px;
   border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 16px;
 }
 .logo-grability {
   background-image: url(../images/grability-logo.png);

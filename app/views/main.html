@@ -43,11 +43,9 @@
           <h4>{{character.name}}</h4>
           <p ng-show="character.description">{{character.description | limitTo: 120}}</p>
           <p ng-hide="character.description">The hero no have Description</p>
-          <a class="waves-effect waves-light btn red button-size" ng-href="#demoModal" ng-click="main_variable(character.id)" modal>VIEW MORE</a>
-
-
         </div>
         <div class="container-text-relatedComics">
+        <a class="waves-effect waves-light btn red button-size" ng-href="#demoModal" ng-click="main_variable(character.id)" modal>VIEW MORE</a>
           <h5>Related Comics</h5>
           <p ng-show="character.stories.items[0].name">{{character.stories.items[0].name | limitTo: 20}}</p>
           <p ng-show="character.events.items[0].name">{{character.events.items[0].name  | limitTo: 20}}</p>
@@ -98,7 +96,7 @@
 <!-- Modal Structure -->
 <div id="demoModal" class="modal">
     <div class="modal-content">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-close--modal" ng-click="main_variable(0)"> <i class="material-icons">close</i></a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-close--modal"> <i class="material-icons">close</i></a>
         <div class="container-modal--content">
           <div class="comics-view" style="background-image: url({{characterComics.thumbnail.path}}/portrait_fantastic.jpg);"></div>
           <h4>{{characterComics.title}}</h4>
@@ -107,11 +105,19 @@
         </div>
     </div>
     <div class="container-button--modal">
-      <button type="button" name="button" class="btn-modal btn-add" ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)"><i class="icon favorite-black" ></i> <p>
-        ADDED TO FAVORITES
-      </p></button>
-      <button type="button" name="button" class="btn-modal btn-buy"><i class="icon shopping"></i><p>
+      <button type="button" name="button" class="btn-modal btn-add" ng-disabled='characterCs == 0' ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)">
+          <div class="container-center" style="width: 211px;">
+            <i class="icon favorite-black" ></i> <p>
+                  ADDED TO FAVORITES
+                </p>
+          </div>
+      </button>
+      <button type="button" name="button" class="btn-modal btn-buy">
+      <div class="container-center" style="width: 168px;">
+          <i class="icon shopping"></i><p>
         BUY FOR {{characterComics.prices[0].price}}
-      </p></button>
+      </p>
+      </div>
+      </button>
     </div>
 </div>
