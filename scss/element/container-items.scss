@@ -10,6 +10,7 @@
       margin: 8px 6px 0;
       color: $gray;
       height: 88px;
+      padding: 0 10px;
     }
 }
 .container-text-relatedComics {
@@ -75,6 +76,8 @@
       border: none;
       color: red;
       font-weight: bold;
+      p {
+      }
   }
   .btn-modal:focus {
     background: $gray-dark !important;
