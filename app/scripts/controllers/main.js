@@ -81,22 +81,48 @@
         "null": "NOT NULL"
       }
     });
+    // var aDias = ["MARIA", "JUAN", "PEDRO", "ISABEL", "PEPE", "FERNANDO", "ROBERTO"];
+    // var contador;
+    // var encontrado = -1;
+    // for( contador=0; contador < aDias.length; contador++ )
+    // {
+    //      if( aDias[contador] == "PEPE") {
+    //          encontrado = contador;
+    //          break;
+    //     }
+    // }
+    // if( encontrado == -1 )
+    //     console.log("No se ha encontrado el nombre");
+    // else
+    //     console.log("PEPE está en la posición [" + encontrado + "]" );
+
     $scope.db.selectAll("user").then(function(results) {
+      var encontrado = -1;
       for(var i=0; i < results.rows.length; i++){
         $scope.users.push(results.rows.item(i));
         $scope.value_user =results.rows.item(i);
+        console.log(results.rows.item(i).title);
         $scope.add_comics = function (title,images) {
-          if($scope.value_user.title == title) {
-            alert("favorite exist");
-          } else {
-            $scope.db.insert('user', {"title": title, "images": images+'/portrait_fantastic.jpg'}).then(function(results) {
-              console.log(results.insertId);
-            })
-            $window.location.reload();
-          }
+          if( results.rows.item.title[i] == title) {
+              console.log(i);
+         }
+         if( encontrado == -1 )
+             console.log("No se ha encontrado el nombre");
+         else
+             console.log("PEPE está en la posición [" + encontrado + "]" );
+
+          // if(results.rows.item(i) ==title) {
+          //   alert("favorite exist");
+          // } else {
+          //   $scope.db.insert('user', {"title": title, "images": images+'/portrait_fantastic.jpg'}).then(function(results) {
+          //     console.log(results.insertId);
+          //   })
+          //   $window.location.reload();
+          // }
         };
       }
     })
+
     $scope.users = [];
     if ($scope.users.length == 0) {
       $scope.add_comics = function (title,images) {

@@ -1,7 +1,7 @@
 <nav class="grey-darken">
    <div class="nav-wrapper">
      <div class="row">
-       <div class="col s3">
+       <div class="col m3 s5">
          <a href="#" class="brand-logo"><div class="logo">
          </div></a>
        </div>
@@ -9,7 +9,7 @@
           <input placeholder="Search" id="first_name" type="text" class="validate input-search" ng-model="searchText">
           <i class="material-icons prefix">search</i>
         </div>
-       <div class="col s3">
+       <div class="col m3 s0">
        </div>
      </div>
       </div>
@@ -18,14 +18,14 @@
  <div class="row no-margins">
    <div class="col s9">
      <div class="row container-filter--character">
-       <div class="col s4">
+       <div class="col m4 s6">
          <div class="container-flex">
            <i class="icon characters"></i><h4>Characters</h4>
          </div>
        </div>
-       <div class="col s5">
+       <div class="col m5 s0">
        </div>
-       <div class="col s3">
+       <div class="col m3 s6">
          <div class="input-field col s12">
            <select ng-model="orderList">
              <option value="" disabled selected>Sort by</option>
@@ -106,14 +106,14 @@
     </div>
     <div class="container-button--modal">
       <button type="button" name="button" class="btn-modal btn-add" ng-disabled='characterCs == 0' ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)">
-          <div class="container-center" style="width: 211px;">
+          <div class="container-center add-favorite">
             <i class="icon" ng-class="characterCs == 0? 'favorite-black':'favorite'"></i> <p>
                   ADDED TO FAVORITES
                 </p>
           </div>
       </button>
       <button type="button" name="button" class="btn-modal btn-buy">
-      <div class="container-center" style="width: 168px;">
+      <div class="container-center buy-comics">
           <i class="icon shopping"></i><p>
         BUY FOR {{characterComics.prices[0].price}}
       </p>

@@ -16,7 +16,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'angular-md5',
     'ui.materialize',
     'angular-websql'
   ])
