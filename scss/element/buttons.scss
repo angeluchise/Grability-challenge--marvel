@@ -4,6 +4,10 @@
     position: absolute;
     bottom: 42px;
     left: 150px;
+    @include breakpoint(mobileonly) {
+      top: 177px;
+      left: 58px;
+    }
 }
 .btn-pagination {
     background: white;

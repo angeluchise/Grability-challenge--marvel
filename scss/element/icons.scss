@@ -5,6 +5,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   margin: 6px 0 0 19px;
+  @include breakpoint(mobileonly) {
+    margin: 8px 0 0 0;
+  }
+  @include breakpoint(phablet) {
+    margin: 8px 0 0 0;
+  }
 }
 i.material-icons.prefix {
     top: 0px;
@@ -20,6 +26,12 @@ i.material-icons.prefix.active {
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 13px;
+    @include breakpoint(mobileonly) {
+      display: none;
+    }
+    @include breakpoint(phablet) {
+      display: block;
+    }
 }
 .characters{
   background-image: url(../icons/characters.png);
@@ -53,4 +65,12 @@ i.material-icons.prefix.active {
   width: 50px;
   height: 50px;
   margin: 0;
+}
+.brand-logo {
+  @include breakpoint(mobileonly) {
+    left: 95px !important;
+  }
+  @include breakpoint(phablet) {
+    left: 95px !important;
+  }
 }
