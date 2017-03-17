@@ -1,20 +1,4 @@
-<nav class="grey-darken">
-   <div class="nav-wrapper">
-     <div class="row">
-       <div class="col m3 s5">
-         <a href="#" class="brand-logo"><div class="logo">
-         </div></a>
-       </div>
-       <div class="input-field col s6">
-          <input placeholder="Search" id="first_name" type="text" class="validate input-search" ng-model="searchText">
-          <i class="material-icons prefix">search</i>
-        </div>
-       <div class="col m3 s0">
-       </div>
-     </div>
-      </div>
-   </div>
- </nav>
+<div ng-include="'views/header.html'"></div>
  <div class="row no-margins">
    <div class="col s9">
      <div class="row container-filter--character">
@@ -70,54 +54,11 @@
        <i class="icon favorite"></i><p>My Favorites</p>
      </div>
      <div class="container-comics--favorite" ng-repeat="user in users">
-        <div class="comics-read" style="background-image: url({{user.images}});">
+        <div class="comics-read" style="background-image: url({{user.images}});" >
         </div>
         <p>{{user.title}}</p>
      </div>
   </div>
-   </div>
- </div>
-<footer class="page-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-      </div>
-      <div class="col l4 offset-l2 s12">
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright ">
-    <div class="container">
-      <p class="footer-paragraph">Grability 2017 - Todos los Derechos Reservados</p>
-      <a class="icon logo-grability text-lighten-4 right" href="#!"></a>
-    </div>
-  </div>
-</footer>
-<!-- Modal Structure -->
-<div id="demoModal" class="modal">
-    <div class="modal-content">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-close--modal"> <i class="material-icons">close</i></a>
-        <div class="container-modal--content">
-          <div class="comics-view" style="background-image: url({{characterComics.thumbnail.path}}/portrait_fantastic.jpg);"></div>
-          <h4>{{characterComics.title}}</h4>
-          <h4 ng-show="characterCs == 0">Hero unavailable</h4>
-          <p>{{characterComics.description}}</p>
-        </div>
-    </div>
-    <div class="container-button--modal">
-      <button type="button" name="button" class="btn-modal btn-add" ng-disabled='characterCs == 0' ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)">
-          <div class="container-center add-favorite">
-            <i class="icon" ng-class="characterCs == 0? 'favorite-black':'favorite'"></i> <p>
-                  ADDED TO FAVORITES
-                </p>
-          </div>
-      </button>
-      <button type="button" name="button" class="btn-modal btn-buy">
-      <div class="container-center buy-comics">
-          <i class="icon shopping"></i><p>
-        BUY FOR {{characterComics.prices[0].price}}
-      </p>
-      </div>
-      </button>
-    </div>
 </div>
+<div ng-include="'views/footer.html'"></div>
+<div ng-include="'views/modal.html'"></div>

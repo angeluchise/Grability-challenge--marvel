@@ -1,0 +1,33 @@
+<!-- Modal Structure -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-close--modal"> <i class="material-icons">close</i></a>
+        <div class="container-modal--content">
+          <div class="comics-view" style="background-image: url({{characterComics.thumbnail.path}}/portrait_fantastic.jpg);"></div>
+          <h4>{{characterComics.title}}{{comicsUser}}</h4>
+          <h4 ng-show="characterCs == 0">Hero unavailable</h4>
+          <p>{{characterComics.description}}</p>
+        </div>
+    </div>
+    <div class="container-button--modal">
+      <div class="hide-button--favorite" ng-repeat="user in users" ng-show="user.title == characterComics.title">
+        <span class="visible-favorite" ng-show="user.title == characterComics.title">
+          agregado a favoritos
+        </span>
+      </div>
+      <button type="button" name="button" class="btn-modal btn-add" ng-disabled='characterCs == 0' ng-click="add_comics(characterComics.title,characterComics.thumbnail.path)">
+          <div class="container-center add-favorite">
+            <i class="icon" ng-class="characterCs == 0? 'favorite-black':'favorite'"></i> <p>
+                  ADDED TO FAVORITES
+                </p>
+          </div>
+      </button>
+      <button type="button" name="button" class="btn-modal btn-buy">
+      <div class="container-center buy-comics">
+          <i class="icon shopping"></i><p>
+        BUY FOR {{characterComics.prices[0].price}}
+      </p>
+      </div>
+      </button>
+    </div>
+</div>
