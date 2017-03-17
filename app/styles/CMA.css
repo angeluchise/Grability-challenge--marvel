@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
 body {
   background: #f4f4f4; }
 
@@ -382,5 +383,24 @@ i.material-icons.prefix.active {
 @media (min-width: 481px) {
   .brand-logo {
     left: 95px !important; } }
+
+.visible-favorite {
+  display: block; }
+
+.hide-favorite {
+  display: none !important; }
+
+.hide-button--favorite {
+  width: 50%;
+  display: table;
+  position: absolute;
+  background: #d50032;
+  color: white;
+  height: 60px;
+  text-align: center;
+  padding-top: 17px;
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 18px; }
 
 /*# sourceMappingURL=CMA.css.map */

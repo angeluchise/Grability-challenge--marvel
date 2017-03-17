@@ -25,7 +25,6 @@
     $scope.pages = [];
     api_marvel.get(function (data){
       $scope.characters = data.data.results;
-      console.log($scope.characters);
     });
     $scope.configPages = function() {
       api_marvel.get(function (data){
@@ -51,13 +50,9 @@
           $scope.currentPage = $scope.pages.length - 1;
       });
     };
-    console.log($scope.currentPage);
-
-
     $scope.setPage = function(index) {
       $scope.currentPage = index - 1;
     };
-
     $scope.configPages();
   }).filter('startFromGrid', function() {
     return function(input, start) {
