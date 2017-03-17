@@ -86,7 +86,6 @@
       .then(function(results) {
         for(var i=0; i < results.rows.length; i++) {
           $scope.users.push(results.rows.item(i));
-          console.log($scope.comics);
           $scope.add_comics = function (title,images) {
             $scope.db.insert('user', {"title": title, "images": images+'/portrait_fantastic.jpg'}).then(function(results) {
             });
